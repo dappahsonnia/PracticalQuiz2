@@ -10,30 +10,64 @@
 <a-scene>
 
   <!-- CAMERA -->
-  <a-entity position="0 10 32">
+  <a-entity position="0 10 35">
     <a-camera></a-camera>
   </a-entity>
 
-  <!-- STARRY SKY -->
+  <!-- MILKY WAY BACKGROUND -->
   <a-sky src="texture/2k_stars_milky_way.jpg"></a-sky>
 
-  <!-- SHOOTING STARS -->
+  <!-- SHOOTING / FALLING STARS (MORE) -->
   <a-entity>
-    <a-sphere radius="0.05" color="white" position="-30 20 -40"
-      animation="property: position; to: 30 -20 40; dur: 2000; loop: true; delay: 0">
-    </a-sphere>
 
-    <a-sphere radius="0.05" color="white" position="-25 15 -35"
-      animation="property: position; to: 25 -25 35; dur: 2500; loop: true; delay: 1500">
-    </a-sphere>
+    <!-- Star A -->
+    <a-entity position="-40 45 -60"
+      animation="property: position; to: 40 -45 60; dur: 1800; loop: true">
+      <a-sphere radius="0.06" material="color:#cce6ff; emissive:#cce6ff"></a-sphere>
+      <a-cylinder height="2" radius="0.02" position="0 1 0"
+        material="color:#cce6ff; opacity:0.5; transparent:true"></a-cylinder>
+    </a-entity>
 
-    <a-sphere radius="0.05" color="white" position="-20 25 -30"
-      animation="property: position; to: 20 -15 30; dur: 1800; loop: true; delay: 3000">
-    </a-sphere>
+    <!-- Star B -->
+    <a-entity position="35 40 -50"
+      animation="property: position; to: -35 -40 50; dur: 2200; loop: true; delay: 800">
+      <a-sphere radius="0.05" material="color:#cce6ff; emissive:#cce6ff"></a-sphere>
+      <a-cylinder height="1.6" radius="0.015" position="0 0.8 0"
+        material="color:#cce6ff; opacity:0.5; transparent:true"></a-cylinder>
+    </a-entity>
 
-    <a-sphere radius="0.05" color="white" position="-35 30 -45"
-      animation="property: position; to: 35 -30 45; dur: 2200; loop: true; delay: 4500">
-    </a-sphere>
+    <!-- Star C -->
+    <a-entity position="-20 50 -70"
+      animation="property: position; to: 20 -50 70; dur: 2000; loop: true; delay: 1600">
+      <a-sphere radius="0.07" material="color:#cce6ff; emissive:#cce6ff"></a-sphere>
+      <a-cylinder height="2.2" radius="0.02" position="0 1.1 0"
+        material="color:#cce6ff; opacity:0.6; transparent:true"></a-cylinder>
+    </a-entity>
+
+    <!-- Star D -->
+    <a-entity position="0 55 -80"
+      animation="property: position; to: 0 -55 80; dur: 2400; loop: true; delay: 2400">
+      <a-sphere radius="0.06" material="color:#cce6ff; emissive:#cce6ff"></a-sphere>
+      <a-cylinder height="2.5" radius="0.02" position="0 1.25 0"
+        material="color:#cce6ff; opacity:0.5; transparent:true"></a-cylinder>
+    </a-entity>
+
+    <!-- Star E -->
+    <a-entity position="-50 35 -40"
+      animation="property: position; to: 50 -35 40; dur: 2100; loop: true; delay: 3200">
+      <a-sphere radius="0.05" material="color:#cce6ff; emissive:#cce6ff"></a-sphere>
+      <a-cylinder height="1.4" radius="0.015" position="0 0.7 0"
+        material="color:#cce6ff; opacity:0.5; transparent:true"></a-cylinder>
+    </a-entity>
+
+    <!-- Star F -->
+    <a-entity position="45 60 -90"
+      animation="property: position; to: -45 -60 90; dur: 2600; loop: true; delay: 4000">
+      <a-sphere radius="0.07" material="color:#cce6ff; emissive:#cce6ff"></a-sphere>
+      <a-cylinder height="2.8" radius="0.025" position="0 1.4 0"
+        material="color:#cce6ff; opacity:0.6; transparent:true"></a-cylinder>
+    </a-entity>
+
   </a-entity>
 
   <!-- SUN -->
@@ -42,31 +76,28 @@
     material="shader: flat">
   </a-sphere>
 
-  <!-- ORBIT RINGS -->
-  <a-ring radius-inner="3.9" radius-outer="4" rotation="-90 0 0" color="#666"></a-ring>
-  <a-ring radius-inner="5.9" radius-outer="6" rotation="-90 0 0" color="#666"></a-ring>
-  <a-ring radius-inner="7.9" radius-outer="8" rotation="-90 0 0" color="#666"></a-ring>
-  <a-ring radius-inner="9.9" radius-outer="10" rotation="-90 0 0" color="#666"></a-ring>
-  <a-ring radius-inner="12.9" radius-outer="13" rotation="-90 0 0" color="#666"></a-ring>
-  <a-ring radius-inner="16.9" radius-outer="17" rotation="-90 0 0" color="#666"></a-ring>
-  <a-ring radius-inner="19.9" radius-outer="20" rotation="-90 0 0" color="#666"></a-ring>
-  <a-ring radius-inner="22.9" radius-outer="23" rotation="-90 0 0" color="#666"></a-ring>
+  <!-- ORBITS -->
+  <a-ring radius-inner="3.9" radius-outer="4" rotation="-90 0 0" color="#555"></a-ring>
+  <a-ring radius-inner="5.9" radius-outer="6" rotation="-90 0 0" color="#555"></a-ring>
+  <a-ring radius-inner="7.9" radius-outer="8" rotation="-90 0 0" color="#555"></a-ring>
+  <a-ring radius-inner="9.9" radius-outer="10" rotation="-90 0 0" color="#555"></a-ring>
+  <a-ring radius-inner="12.9" radius-outer="13" rotation="-90 0 0" color="#555"></a-ring>
+  <a-ring radius-inner="16.9" radius-outer="17" rotation="-90 0 0" color="#555"></a-ring>
+  <a-ring radius-inner="19.9" radius-outer="20" rotation="-90 0 0" color="#555"></a-ring>
+  <a-ring radius-inner="22.9" radius-outer="23" rotation="-90 0 0" color="#555"></a-ring>
 
-  <!-- MERCURY -->
+  <!-- PLANETS (ALL PRESENT) -->
   <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 8000">
     <a-sphere radius="0.3" position="4 0 0" src="texture/2k_mercury.jpg"></a-sphere>
   </a-entity>
 
-  <!-- VENUS -->
   <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 12000">
     <a-sphere radius="0.5" position="6 0 0" src="texture/2k_venus_surface.jpg"></a-sphere>
     <a-sphere radius="0.52" position="6 0 0"
       src="texture/2k_venus_atmosphere.jpg"
-      material="opacity: 0.5; transparent: true">
-    </a-sphere>
+      material="opacity:0.5; transparent:true"></a-sphere>
   </a-entity>
 
-  <!-- EARTH + MOON -->
   <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 15000">
     <a-sphere radius="0.55" position="8 0 0"
       src="texture/2k_earth_daymap.jpg"
@@ -79,32 +110,26 @@
     </a-entity>
   </a-entity>
 
-  <!-- MARS -->
   <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 18000">
     <a-sphere radius="0.45" position="10 0 0" src="texture/2k_mars.jpg"></a-sphere>
   </a-entity>
 
-  <!-- JUPITER -->
   <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 22000">
     <a-sphere radius="1.2" position="13 0 0" src="texture/2k_jupiter.jpg"></a-sphere>
   </a-entity>
 
-  <!-- SATURN -->
   <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 26000">
     <a-sphere radius="1.1" position="17 0 0" src="texture/2k_saturn.jpg"></a-sphere>
     <a-ring position="17 0 0" rotation="-90 0 0"
       radius-inner="1.4" radius-outer="2.2"
       src="texture/2k_saturn_ring_alpha.png"
-      material="transparent: true">
-    </a-ring>
+      material="transparent:true"></a-ring>
   </a-entity>
 
-  <!-- URANUS -->
   <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 30000">
     <a-sphere radius="0.8" position="20 0 0" src="texture/2k_uranus.jpg"></a-sphere>
   </a-entity>
 
-  <!-- NEPTUNE -->
   <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 34000">
     <a-sphere radius="0.8" position="23 0 0" src="texture/2k_neptune.jpg"></a-sphere>
   </a-entity>
