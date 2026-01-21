@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Solar System</title>
+  <title>VR Solar System</title>
   <script src="script/aframe.min.js"></script>
 </head>
 
@@ -14,19 +14,30 @@
     <a-camera></a-camera>
   </a-entity>
 
-  <!-- STARS BACKGROUND -->
+  <!-- STARRY SKY -->
   <a-sky src="texture/2k_stars_milky_way.jpg"></a-sky>
 
-  <!-- FALLING STARS -->
-  <a-entity position="0 30 -20"
-    animation="property: position; to: 0 -30 -20; loop: true; dur: 15000">
-    <a-sphere radius="0.08" material="color: white"></a-sphere>
+  <!-- SHOOTING STARS -->
+  <a-entity>
+    <a-sphere radius="0.05" color="white" position="-30 20 -40"
+      animation="property: position; to: 30 -20 40; dur: 2000; loop: true; delay: 0">
+    </a-sphere>
+
+    <a-sphere radius="0.05" color="white" position="-25 15 -35"
+      animation="property: position; to: 25 -25 35; dur: 2500; loop: true; delay: 1500">
+    </a-sphere>
+
+    <a-sphere radius="0.05" color="white" position="-20 25 -30"
+      animation="property: position; to: 20 -15 30; dur: 1800; loop: true; delay: 3000">
+    </a-sphere>
+
+    <a-sphere radius="0.05" color="white" position="-35 30 -45"
+      animation="property: position; to: 35 -30 45; dur: 2200; loop: true; delay: 4500">
+    </a-sphere>
   </a-entity>
 
   <!-- SUN -->
-  <a-sphere
-    radius="2.5"
-    position="0 0 0"
+  <a-sphere radius="2.5" position="0 0 0"
     src="texture/2k_sun.jpg"
     material="shader: flat">
   </a-sphere>
@@ -43,17 +54,12 @@
 
   <!-- MERCURY -->
   <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 8000">
-    <a-sphere radius="0.3" position="4 0 0"
-      src="texture/2k_mercury.jpg" material="shader: flat">
-    </a-sphere>
+    <a-sphere radius="0.3" position="4 0 0" src="texture/2k_mercury.jpg"></a-sphere>
   </a-entity>
 
-  <!-- VENUS (SURFACE + ATMOSPHERE) -->
+  <!-- VENUS -->
   <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 12000">
-    <a-sphere radius="0.5" position="6 0 0"
-      src="texture/2k_venus_surface.jpg" material="shader: flat">
-    </a-sphere>
-
+    <a-sphere radius="0.5" position="6 0 0" src="texture/2k_venus_surface.jpg"></a-sphere>
     <a-sphere radius="0.52" position="6 0 0"
       src="texture/2k_venus_atmosphere.jpg"
       material="opacity: 0.5; transparent: true">
@@ -62,66 +68,45 @@
 
   <!-- EARTH + MOON -->
   <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 15000">
-
     <a-sphere radius="0.55" position="8 0 0"
       src="texture/2k_earth_daymap.jpg"
       animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">
     </a-sphere>
 
-    <!-- MOON -->
     <a-entity position="8 0 0"
       animation="property: rotation; to: 0 360 0; loop: true; dur: 4000">
-      <a-sphere radius="0.15" position="1 0 0"
-        src="texture/2k_moon.jpg">
-      </a-sphere>
+      <a-sphere radius="0.15" position="1 0 0" src="texture/2k_moon.jpg"></a-sphere>
     </a-entity>
-
   </a-entity>
 
   <!-- MARS -->
   <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 18000">
-    <a-sphere radius="0.45" position="10 0 0"
-      src="texture/2k_mars.jpg">
-    </a-sphere>
+    <a-sphere radius="0.45" position="10 0 0" src="texture/2k_mars.jpg"></a-sphere>
   </a-entity>
 
   <!-- JUPITER -->
   <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 22000">
-    <a-sphere radius="1.2" position="13 0 0"
-      src="texture/2k_jupiter.jpg">
-    </a-sphere>
+    <a-sphere radius="1.2" position="13 0 0" src="texture/2k_jupiter.jpg"></a-sphere>
   </a-entity>
 
-  <!-- SATURN + RINGS -->
+  <!-- SATURN -->
   <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 26000">
-
-    <a-sphere radius="1.1" position="17 0 0"
-      src="texture/2k_saturn.jpg">
-    </a-sphere>
-
-    <a-ring
-      position="17 0 0"
-      rotation="-90 0 0"
-      radius-inner="1.4"
-      radius-outer="2.2"
+    <a-sphere radius="1.1" position="17 0 0" src="texture/2k_saturn.jpg"></a-sphere>
+    <a-ring position="17 0 0" rotation="-90 0 0"
+      radius-inner="1.4" radius-outer="2.2"
       src="texture/2k_saturn_ring_alpha.png"
       material="transparent: true">
     </a-ring>
-
   </a-entity>
 
   <!-- URANUS -->
   <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 30000">
-    <a-sphere radius="0.8" position="20 0 0"
-      src="texture/2k_uranus.jpg">
-    </a-sphere>
+    <a-sphere radius="0.8" position="20 0 0" src="texture/2k_uranus.jpg"></a-sphere>
   </a-entity>
 
   <!-- NEPTUNE -->
   <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 34000">
-    <a-sphere radius="0.8" position="23 0 0"
-      src="texture/2k_neptune.jpg">
-    </a-sphere>
+    <a-sphere radius="0.8" position="23 0 0" src="texture/2k_neptune.jpg"></a-sphere>
   </a-entity>
 
 </a-scene>
